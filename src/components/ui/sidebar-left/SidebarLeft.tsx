@@ -5,7 +5,7 @@ import { a11yProps } from "./utils";
 import { TabPanel, Navigator, Components } from "./pannels";
 
 export function SidebarLeft() {
-  const [value, setValue] = React.useState("navigation");
+  const [value, setValue] = React.useState("navigator");
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
@@ -36,7 +36,7 @@ export function SidebarLeft() {
         scrollButtons={false}
       >
         {sidebarLeftTabs.map((tab, index) => {
-          return <Tab {...tab} {...a11yProps(index)} />;
+          return <Tab {...tab} {...a11yProps(index)} key={index} />;
         })}
       </Tabs>
       <TabPanel value={value} index={"components"}>

@@ -13,7 +13,7 @@ export function Components() {
       </Box>
       <Divider />
       {componentsGroups.map((group) => (
-        <>
+        <div key={group.title}>
           <Typography
             sx={{
               padding: [1, 2],
@@ -49,7 +49,7 @@ export function Components() {
           </Grid>
 
           <Divider />
-        </>
+        </div>
       ))}
     </div>
   );
