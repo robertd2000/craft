@@ -5,9 +5,6 @@ import {
   Grid,
   Typography,
   Button as MaterialButton,
-  FormControl,
-  FormLabel,
-  Slider,
 } from "@mui/material";
 import { useEditor } from "@craftjs/core";
 
@@ -34,7 +31,7 @@ export function SettingsPanel() {
   });
 
   return isEnabled && selected ? (
-    <Box bgcolor="rgba(0, 0, 0, 0.06)" mt={2} px={2} py={2}>
+    <Box px={2} py={2}>
       <Grid container direction="column" spacing={0}>
         <Grid item>
           <Box pb={2}>

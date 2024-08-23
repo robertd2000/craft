@@ -2,8 +2,6 @@
 
 import { Grid, Card, Paper } from "@mui/material";
 import {
-  Topbar,
-  Toolbox,
   SettingsPanel,
   Container,
   Button,
@@ -76,7 +74,6 @@ export default function Home() {
             </Grid>
             <Grid item xs={2}>
               <Paper>
-                <Toolbox />
                 <SettingsPanel />
               </Paper>
             </Grid>

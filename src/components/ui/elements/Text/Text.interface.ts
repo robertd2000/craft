@@ -1,4 +1,4 @@
 export interface TextProps {
-  text: string;
-  fontSize: string;
+  text?: string;
+  fontSize?: string;
 }

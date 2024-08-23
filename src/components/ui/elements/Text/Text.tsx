@@ -6,7 +6,7 @@ import { useNode } from "@craftjs/core";
 import ContentEditable from "react-contenteditable";
 import { FormControl, FormLabel, Slider } from "@mui/material";
 
-export function Text({ text, fontSize, ...props }: TextProps) {
+export function Text({ text = "Hello!", fontSize, ...props }: TextProps) {
   const {
     connectors: { connect, drag },
     selected,

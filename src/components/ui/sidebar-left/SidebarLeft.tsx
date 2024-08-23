@@ -2,7 +2,7 @@ import { Box, Tabs, Tab, Typography } from "@mui/material";
 import React from "react";
 import { sidebarLeftTabs } from "./constants";
 import { a11yProps } from "./utils";
-import { TabPanel, Navigator } from "./features";
+import { TabPanel, Navigator, Components } from "./pannels";
 
 export function SidebarLeft() {
   const [value, setValue] = React.useState("navigation");
@@ -40,7 +40,7 @@ export function SidebarLeft() {
         })}
       </Tabs>
       <TabPanel value={value} index={"components"}>
-        Item One
+        <Components />
       </TabPanel>
       <TabPanel value={value} index={"navigator"}>
         <Navigator />
