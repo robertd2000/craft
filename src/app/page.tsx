@@ -1,13 +1,13 @@
 "use client";
 
-import { Grid, Card, Paper } from "@mui/material";
+import { Grid, Card } from "@mui/material";
 import {
-  SettingsPanel,
   Container,
   Button,
   Text,
   SidebarLeft,
   Canvas,
+  SettingsPanel,
 } from "@/components";
 import { Editor } from "@craftjs/core";
 
@@ -41,17 +41,14 @@ export default function Home() {
             <Grid
               item
               xs
-              padding={1}
               style={{
-                backgroundColor: "grey",
+                backgroundColor: "rgb(237, 237, 237)",
               }}
             >
               <Canvas />
             </Grid>
             <Grid item xs={2}>
-              <Paper>
-                <SettingsPanel />
-              </Paper>
+              <SettingsPanel />
             </Grid>
           </Grid>
         </Editor>

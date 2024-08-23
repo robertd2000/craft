@@ -1,8 +1,18 @@
 "use client";
 
 import React from "react";
-import { ButtonProps, Button as MaterialButton } from "@mui/material";
+import {
+  ButtonProps,
+  FormControl,
+  FormControlLabel,
+  FormLabel,
+  Button as MaterialButton,
+  Radio,
+  RadioGroup,
+} from "@mui/material";
 import { useNode } from "@craftjs/core";
+import { Inspector } from "../../inspector";
+import { ToolbarItem } from "../../controls/Toolbar/ToolbarItem";
 
 export function Button({ children = "Click me!", ...props }: ButtonProps) {
   const {
@@ -10,8 +20,32 @@ export function Button({ children = "Click me!", ...props }: ButtonProps) {
   } = useNode();
 
   return (
-    <MaterialButton ref={(ref) => connect(drag(ref))} {...props}>
+    <button ref={(ref) => connect(drag(ref))} {...props}>
       {children}
-    </MaterialButton>
+    </button>
   );
 }
+
+const ButtonSettings = function () {
+  return (
+    <>
+      <>
+        <ToolbarItem
+          full={true}
+          propKey="background"
+          type="bg"
+          label="Background"
+        />
+        <ToolbarItem full={true} propKey="color" type="color" label="Text" />
+      </>
+    </>
+  );
+};
+export const ButtonDefaultProps = {};
+
+Button.craft = {
+  props: ButtonDefaultProps,
+  related: {
+    settings: ButtonSettings,
+  },
+};
