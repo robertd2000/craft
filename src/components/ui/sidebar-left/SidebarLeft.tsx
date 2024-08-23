@@ -2,32 +2,7 @@ import { Box, Tabs, Tab, Typography } from "@mui/material";
 import React from "react";
 import { sidebarLeftTabs } from "./constants";
 import { a11yProps } from "./utils";
-
-interface TabPanelProps {
-  children?: React.ReactNode;
-  index: string;
-  value: string;
-}
-
-function TabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value != index}
-      id={`vertical-tabpanel-${index}`}
-      aria-labelledby={`vertical-tab-${index}`}
-      {...other}
-    >
-      {value == index && (
-        <Box sx={{ p: 3 }}>
-          <Typography color={"black"}>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
+import { TabPanel, Navigator } from "./features";
 
 export function SidebarLeft() {
   const [value, setValue] = React.useState("navigation");
@@ -51,7 +26,14 @@ export function SidebarLeft() {
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: "divider" }}
+        sx={{
+          borderRight: 1,
+          borderColor: "divider",
+          "& .MuiTab-root": {
+            minWidth: 0,
+          },
+        }}
+        scrollButtons={false}
       >
         {sidebarLeftTabs.map((tab, index) => {
           return <Tab {...tab} {...a11yProps(index)} />;
@@ -61,7 +43,7 @@ export function SidebarLeft() {
         Item One
       </TabPanel>
       <TabPanel value={value} index={"navigator"}>
-        Item Two
+        <Navigator />
       </TabPanel>
     </Box>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-import { Typography, Grid, Card, Paper } from "@mui/material";
+import { Grid, Card, Paper } from "@mui/material";
 import {
   Topbar,
   Toolbox,
@@ -29,21 +29,20 @@ export default function Home() {
             Container,
           }}
         >
-          <Topbar />
+          {/* <Topbar /> */}
           <Grid
             container
-            spacing={2}
             style={{
-              paddingTop: "10px",
               height: "100%",
             }}
           >
-            <Grid xs={2}>
+            <Grid item width={"300px"}>
               <SidebarLeft />
             </Grid>
             <Grid
               item
-              xs={8}
+              xs
+              padding={1}
               style={{
                 backgroundColor: "grey",
               }}
