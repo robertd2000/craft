@@ -37,7 +37,7 @@ export function Text({ text = "Hello!", fontSize, ...props }: TextProps) {
         disabled={!editable}
         onChange={(e) =>
           setProp(
-            (props) =>
+            (props: { text: string }) =>
               (props.text = e.target.value.replace(/<\/?[^>]+(>|$)/g, "")),
             500
           )
@@ -68,7 +68,11 @@ const TextSettings = () => {
           min={1}
           max={50}
           onChange={(_, value) => {
-            setProp((props) => (props.fontSize = value), 1000);
+            setProp(
+              (props: { fontSize: number | number[] }) =>
+                (props.fontSize = value),
+              1000
+            );
           }}
         />
       </FormControl>

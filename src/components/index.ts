@@ -7,3 +7,5 @@ export { SettingsPanel } from "./ui/controls/SettingsPanel";
 export { Topbar } from "./ui/controls/Topbar";
 // sidebars
 export { SidebarLeft } from "./ui/sidebar-left";
+//canvas
+export { Canvas } from "./ui/canvas";
