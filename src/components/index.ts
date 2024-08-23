@@ -6,3 +6,5 @@ export { Text } from "./ui/elements/Text";
 export { SettingsPanel } from "./ui/controls/SettingsPanel";
 export { Toolbox } from "./ui/controls/Toolbox";
 export { Topbar } from "./ui/controls/Topbar";
+// sidebars
+export { SidebarLeft } from "./ui/sidebar-left";
