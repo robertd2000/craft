@@ -10,6 +10,7 @@ import {
   SettingsPanel,
 } from "@/components";
 import { Editor } from "@craftjs/core";
+import { RenderNode } from "@/components/ui/render-node";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
             Text,
             Container,
           }}
+          onRender={RenderNode}
         >
           {/* <Topbar /> */}
           <Grid

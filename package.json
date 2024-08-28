@@ -15,11 +15,15 @@
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^5.16.7",
     "@mui/material": "^5.16.7",
+    "classnames": "^2.5.1",
+    "debounce": "^2.1.0",
     "mui-color-input": "^3.0.0",
     "next": "14.2.6",
+    "re-resizable": "^6.9.17",
     "react": "^18",
     "react-contenteditable": "^3.3.7",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "styled-components": "^6.1.12"
   },
   "devDependencies": {
     "@types/node": "^20",
